@@ -8,6 +8,7 @@
 import SwiftUI
 import YouTubePlayerKit
 import SwiftData
+import OSLog
 
 struct TitleDetailView: View {
     let title: Title
@@ -17,6 +18,11 @@ struct TitleDetailView: View {
     @Environment(ViewModel.self) private var viewModel
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
+    
+    init(title: Title) {
+        self.title = title
+        Logger().debug("TitleDetailView init")
+    }
     
     var body: some View {
         GeometryReader { geo in
