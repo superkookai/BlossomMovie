@@ -6,13 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BF1338C72F4E964D00BFF216 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1338C62F4E964D00BFF216 /* YouTubePlayerKit */; };
+		BFFA81682F4EE00100524DF3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFFA81672F4EE00100524DF3 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BFDA2C0C2F4D5C0300323BA1 /* BlossomMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA81672F4EE00100524DF3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BFDA2C3E2F4DDC4100323BA1 /* Exceptions for "BlossomMovie" folder in "BlossomMovie" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BFDA2C0B2F4D5C0300323BA1 /* BlossomMovie */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BFDA2C0E2F4D5C0300323BA1 /* BlossomMovie */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BFDA2C3E2F4DDC4100323BA1 /* Exceptions for "BlossomMovie" folder in "BlossomMovie" target */,
+			);
 			path = BlossomMovie;
 			sourceTree = "<group>";
 		};
@@ -23,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1338C72F4E964D00BFF216 /* YouTubePlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +52,7 @@
 		BFDA2C032F4D5C0300323BA1 = {
 			isa = PBXGroup;
 			children = (
+				BFFA81672F4EE00100524DF3 /* .gitignore */,
 				BFDA2C0E2F4D5C0300323BA1 /* BlossomMovie */,
 				BFDA2C0D2F4D5C0300323BA1 /* Products */,
 			);
@@ -65,6 +86,7 @@
 			);
 			name = BlossomMovie;
 			packageProductDependencies = (
+				BF1338C62F4E964D00BFF216 /* YouTubePlayerKit */,
 			);
 			productName = BlossomMovie;
 			productReference = BFDA2C0C2F4D5C0300323BA1 /* BlossomMovie.app */;
@@ -94,6 +116,9 @@
 			);
 			mainGroup = BFDA2C032F4D5C0300323BA1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BF1338C52F4E964D00BFF216 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BFDA2C0D2F4D5C0300323BA1 /* Products */;
 			projectDirPath = "";
@@ -109,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFA81682F4EE00100524DF3 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +282,7 @@
 				DEVELOPMENT_TEAM = T9MD4URZFH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlossomMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +315,7 @@
 				DEVELOPMENT_TEAM = T9MD4URZFH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlossomMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF1338C52F4E964D00BFF216 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF1338C62F4E964D00BFF216 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1338C52F4E964D00BFF216 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDA2C042F4D5C0300323BA1 /* Project object */;
 }

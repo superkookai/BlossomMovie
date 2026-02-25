@@ -1,0 +1,40 @@
+//
+//  UpcommingView.swift
+//  BlossomMovie
+//
+//  Created by Weerawut on 25/2/2569 BE.
+//
+
+import SwiftUI
+
+struct UpcommingView: View {
+    @Environment(ViewModel.self) private var viewModel
+    
+    var body: some View {
+        NavigationStack {
+            GeometryReader { geo in
+                switch viewModel.upcomingStatus {
+                case .notStarted:
+                    EmptyView()
+                case .fetching:
+                    ProgressView()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                case .success:
+                    VerticalListView(titles: viewModel.upcomingMovies, canDelete: false)
+                case .failure(let underlyError):
+                    Text(underlyError.localizedDescription)
+                        .errorMessage()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                }
+            }
+            .task {
+                await viewModel.getUpcomingMovies()
+            }
+        }
+    }
+}
+
+#Preview {
+    UpcommingView()
+        .environment(ViewModel())
+}
